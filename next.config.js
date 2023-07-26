@@ -7,8 +7,8 @@ const nextConfig = {
   },
   productionBrowserSourceMaps: true,
   publicRuntimeConfig: {
-    projectDomain: '',
-    socketConnectDomain: ''
+    projectDomain: 'http://localhost:3000/',
+    socketConnectDomain: 'http://localhost:3200/'
   },
 }
 
