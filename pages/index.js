@@ -21,7 +21,7 @@ export default function Home() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageTitle} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className='h-100'>
         <header>
