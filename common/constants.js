@@ -1,10 +1,7 @@
-import getConfig from 'next/config';
-const { publicRuntimeConfig } = getConfig()
-
 export const debugIt = false;
 
-export const PROJECT_DOMAIN = process.env.ENV_PROJECT_DOMAIN || publicRuntimeConfig.projectDomain;
-export const SOCKET_CONNECT_DOMAIN = process.env.ENV_SOCKET_CONNECT_DOMAIN || publicRuntimeConfig.socketConnectDomain;
+export const PROJECT_DOMAIN = process.env.NEXT_PUBLIC_PROJECT_DOMAIN;
+export const SOCKET_CONNECT_DOMAIN = process.env.NEXT_PUBLIC_SOCKET_CONNECT_DOMAIN;
 
 export const API_DOMAIN = PROJECT_DOMAIN + 'api/';
 export const HTML_REPORT_DOMAIN_URL = PROJECT_DOMAIN + 'artifacts';

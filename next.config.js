@@ -6,10 +6,6 @@ const nextConfig = {
     defaultLocale: 'en',
   },
   productionBrowserSourceMaps: true,
-  publicRuntimeConfig: {
-    projectDomain: 'http://localhost:3000/',
-    socketConnectDomain: 'http://localhost:3200/'
-  },
 }
 
 module.exports = nextConfig
