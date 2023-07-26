@@ -1,0 +1,32 @@
+$offcanvas-vertical-height: 70vh;
+@import '~bootstrap/scss/bootstrap';
+$placeHolderColor: #D3D3D3;
+
+main {
+    min-height: calc(100vh - 150px);
+  }
+
+  input.custom-focus-border-none:focus{
+    outline: none;
+}
+
+.custom-disabled-bg{
+  background-color: #FAFAFA !important;
+}
+
+.form-control::placeholder, ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $placeHolderColor;
+  opacity: 1; /* Firefox */
+}
+
+.form-control::placeholder, :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $placeHolderColor;
+}
+
+.form-control::placeholder, ::-ms-input-placeholder { /* Microsoft Edge */
+  color: $placeHolderColor;
+}
+
+.w-80 {
+  width: 80% !important;
+}
