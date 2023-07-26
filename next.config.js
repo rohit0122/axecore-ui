@@ -7,8 +7,8 @@ const nextConfig = {
   },
   productionBrowserSourceMaps: true,
   publicRuntimeConfig: {
-    projectDomain: 'http://localhost:3000/',
-    socketConnectDomain: 'http://localhost:3200/'
+    projectDomain: 'https://axecore-prp10al5v-rohit0122.vercel.app/',
+    socketConnectDomain: 'https://axecore-prp10al5v-rohit0122.vercel.app:3200/'
   },
 }
 
