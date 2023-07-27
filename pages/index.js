@@ -10,7 +10,7 @@ import { AllResults } from '../components/AllResults';
 import Loader from "../components/Loader";
 import { useState } from 'react';
 import { Jumbotron } from '../components/Jumbotron';
-import { A11Y_PAGE_TITLE, A11Y_TAB_TITLE } from '../common/messages';
+import { A11Y_PAGE_TITLE, A11Y_TAB_TITLE, A11Y_WELCOME_DESCRIPTION } from '../common/messages';
 
 export default function Home() {
   const [showLoader, setShowLoader] = useState(false);
@@ -20,7 +20,10 @@ export default function Home() {
     <div className={''}>
       <Head>
         <title>{pageTitle}</title>
-        <meta name="description" content={pageTitle} />
+        <meta name="description" content={A11Y_WELCOME_DESCRIPTION} />
+        <meta name="keywords" content="axe, axe core, accessibility, a11y, a11y tool" />
+        <meta name="author" content="Rohit Shrivastava"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className='h-100'>
