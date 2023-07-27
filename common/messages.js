@@ -2,7 +2,7 @@ export const A11Y_PAGE_TITLE = { HOME: 'A11Y Tool UI - Set Configuration', RUN_S
 export const A11Y_TAB_TITLE = { CONFIG_FORM: 'Configurations', RUN_SCAN: 'Run Scan', SCAN_RESULTS: 'Scan Results' }
 
 export const A11Y_WELCOME_HEADING = 'Welcome to Accessibility validation tool';
-export const A11Y_WELCOME_DESCRIPTION = 'This tool empowers team leaders to validate and ensure that there are no accessibility issues present at the time of sprint deliverables. Thereby enabling the development team to deliver more accessible pages to end users every time.';
+export const A11Y_WELCOME_DESCRIPTION = 'This tool empowers developers, team leads and other stakeholders to validate and ensure that there are no accessibility issues present at the time of sprint deliverables. Thereby enabling the development team to deliver more accessible pages to end users every time.';
 
 export const A11Y_CONFIG_FORM = {
     HEADER_TITLE: 'A11Y configuration',
@@ -23,8 +23,8 @@ export const A11Y_CONFIG_FORM = {
     FIELD_FILES_TO_VERIFY: {
         TITLE: 'HTML file(s) or URL(s) to validate',
         SUB_INFO: '(comma separated)',
-        DEFAULT_VALUE: 'https://www.aarp.org/,/Users/Desktop/test-file.html',
-        PLACE_HOLDER: 'https://www.aarp.org/,/Users/Desktop/test-file.html'
+        DEFAULT_VALUE: 'https://www.tadigital.com/home,/Users/Desktop/test-file.html',
+        PLACE_HOLDER: 'https://www.tadigital.com/home,/Users/Desktop/test-file.html'
     },
     FIELD_DISABLE_RULES: {
         TITLE: 'Disable deque rule',
@@ -35,8 +35,8 @@ export const A11Y_CONFIG_FORM = {
     FIELD_FOLDER_PATH_TO_VERIFY: {
         TITLE: 'Absolute Path to folder ',
         SUB_INFO: '(HTML files to be scanned in the path including subfolders)',
-        DEFAULT_VALUE: '/Documents/Projects/AARP/Repos/uxdia/ui.apps/src/main/content/jcr_root/apps/uxdia/',
-        PLACE_HOLDER: '/Documents/Projects/AARP/Repos/uxdia/ui.apps/src/main/content/jcr_root/apps/uxdia/'
+        DEFAULT_VALUE: '/Documents/Projects/UI/Repos/uxdia/ui.apps/src/main/content/jcr_root/apps/uxdia/',
+        PLACE_HOLDER: '/Documents/Projects/UI/Repos/uxdia/ui.apps/src/main/content/jcr_root/apps/uxdia/'
     },
 };
 export const A11Y_START_SCAN_MSG ='Start accessibility scan';
