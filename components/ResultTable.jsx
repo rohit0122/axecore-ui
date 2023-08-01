@@ -18,7 +18,7 @@ export function ResultTable(props) {
           <th className="bg-secondary text-light text-break w-50">
             {A11Y_SCAN_RESULTS_TBL.TH_TEXT.PAGE_URL}
           </th>
-          <th className="bg-secondary text-light" width="">
+          <th className="bg-secondary text-light">
             {A11Y_SCAN_RESULTS_TBL.TH_TEXT.SCORE}
           </th>
           <th className="bg-secondary text-light">

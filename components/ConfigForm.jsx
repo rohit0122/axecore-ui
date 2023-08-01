@@ -10,6 +10,7 @@ import Link from "next/link";
 import { debugIt, sleep } from "../common/constants";
 import { A11Y_CONFIG_FORM } from "../common/messages";
 
+
 export function ConfigForm(props) {
   const [isRegex, setIsRegex] = useState(false);
   const [findHtmlFromHere, setFindHtmlFromHere] = useState(null);
@@ -97,7 +98,7 @@ export function ConfigForm(props) {
                 className={`${isRegex ? "col-4  border-2 border-end" : ""}`}
                 controlId="formGridRegex"
               >
-                {<Form.Label>Validate HTML files by Regex</Form.Label>}
+                <div aria-live="assertive">Validate HTML files by Regex</div>
                 <Form.Check
                   onClick={(e) => setIsRegex(e.target.checked)}
                   type="switch"
@@ -117,7 +118,7 @@ export function ConfigForm(props) {
                   </span>
                 </Form.Label>
                 <Form.Control
-                  type="input"
+                  type="text"
                   placeholder={
                     A11Y_CONFIG_FORM.FIELD_FOLDER_PATH_TO_VERIFY.PLACE_HOLDER
                   }
@@ -135,7 +136,7 @@ export function ConfigForm(props) {
                     A11Y_CONFIG_FORM.FIELD_DISABLE_RULES.PLACE_HOLDER
                   }
                   defaultValue={tagInputFields.disableRules}
-                  rows={6}
+                  rows={3}
                   fieldKey={"disableRules"}
                   updateFieldData={(fieldKey, fieldValue) =>
                     fnSetTagInputField(fieldKey, fieldValue)
@@ -194,7 +195,7 @@ export function ConfigForm(props) {
                     }
                     disabled={isRegex}
                     defaultValue={tagInputFields.filesToVerify}
-                    rows={6}
+                    rows={3}
                     fieldKey={"filesToVerify"}
                     updateFieldData={(fieldKey, fieldValue) =>
                       fnSetTagInputField(fieldKey, fieldValue)
