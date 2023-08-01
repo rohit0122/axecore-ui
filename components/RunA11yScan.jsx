@@ -116,8 +116,8 @@ export function RunA11yScan(props) {
           as={"h2"}
           className="fs-5 card-header d-flex justify-content-between"
         >
-          <div className="mt-2">{A11Y_START_SCAN_MSG}</div>
-          <Row className="">
+          <span className="mt-2">{A11Y_START_SCAN_MSG}</span>
+          <Row as={"span"}>
             {downloadCsv && (
               <Col className="col-md-auto mt-1">
                 <Link href={downloadCsv}>{A11Y_EXPORT_AS_CSV_TEXT}</Link>

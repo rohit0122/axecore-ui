@@ -99,10 +99,9 @@ export function TagInput(props) {
               </Badge>
             ))}
           </div>
-          <input
+          <textarea
             id={props.fieldControlId}
-            className="border-0 custom-focus-border-none m-2 w-75 ps-2"
-            type="text"
+            className="border-0 custom-focus-border-none w-100 ps-3"
             placeholder={props.placeholder}
             onKeyUp={(e) => fnSetTagData(e)}
             onBlurCapture={(e) => fnSetTagData(e)}

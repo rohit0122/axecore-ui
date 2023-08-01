@@ -13,7 +13,7 @@ import {
 import { ResultTable } from "./ResultTable";
 import { API_GET_ALL_CSV_REPORTS, API_GET_CSV_RESULTS, debugIt, API_DOWNLOAD_REPORT_AS_ZIP2, API_EXPORT_AS_CSV } from "../common/constants";
 import Link from "next/link";
-import { A11Y_DOWNLOAD_AS_ZIP_TEXT, A11Y_EXPORT_AS_CSV_TEXT, A11Y_OPEN_RESULTS_TBL_MSG, A11Y_SCAN_RESULTS_CSV_MSG } from "../common/messages";
+import { A11Y_DOWNLOAD_AS_ZIP_TEXT, A11Y_EXPORT_AS_CSV_TEXT, A11Y_OPEN_RESULTS_TBL_MSG, A11Y_SCAN_RESULTS_CSV_MSG, A11Y_SCAN_RESULTS_TBL } from "../common/messages";
 
 export function AllResults(props) {
   const [csvReports, setCsvReports] = useState([]);
@@ -57,11 +57,11 @@ export function AllResults(props) {
 
   return (
     <>
-      <Alert variant="warning">
-        {A11Y_SCAN_RESULTS_CSV_MSG}
-      </Alert>
-
-      <ListGroup as="ul">
+      {Object.keys(csvReports).length > 0 ? <>
+        <Alert variant="warning">
+          {A11Y_SCAN_RESULTS_CSV_MSG}
+        </Alert>
+        <ListGroup as="ul">
         {Object.keys(csvReports).map((reportGroup, index) => (
           <ListGroup.Item key={index} as="li">
             <div className="d-flex align-items-center justify-content-between">
@@ -127,6 +127,12 @@ export function AllResults(props) {
           <ResultTable resultsArray={csvResults} />
         </Offcanvas.Body>
       </Offcanvas>
+      </>
+    : 
+    <Alert variant="danger">
+      {A11Y_SCAN_RESULTS_TBL.NO_RESULTS_TEXT}
+    </Alert>
+  }
     </>
   );
 }
